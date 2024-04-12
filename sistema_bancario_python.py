@@ -21,10 +21,13 @@ while True:
     menu()
     operacao = int(input('Operação: '))
 
-    if operacao == 1:
+    if operacao == 1 and deposito >= 0:
         deposito = float(input('Valor do depósito:\nR$ '))
         saldo += deposito
         total_operacoes += 1
+        if deposito < 0:
+            saldo, deposito,total_operacoes = 0, 0, 0
+            print(f'Valor inválido! Insira valores acima de R$0,00\n')
 
     elif operacao == 2:
         saque = float(input('Valor de saque:\nR$ '))
