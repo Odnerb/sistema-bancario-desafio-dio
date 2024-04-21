@@ -8,6 +8,7 @@ Guilherme Carvalho
 
 ## Atualização ⚠️
 !!! Esta nova versão possuí funções para ambos os objetivos abaixo !!!
+O que tem de novo: (criação de conta e cadastro de usuário)
 
 ## Objetivo geral 🎯
 Criar um sistema bancário com funções para as operações: sacar, depositar, 
