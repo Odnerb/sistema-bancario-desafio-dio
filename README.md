@@ -6,9 +6,12 @@ Guilherme Carvalho
 [![LinkedIn](https://img.shields.io/badge/LinkedIn-0077B5?style=for-the-badge&logo=linkedin&logoColor=white)](https://www.linkedin.com/in/guilherme-arthur-de-carvalho/)
 [![GitHub](https://img.shields.io/badge/GitHub-100000?style=for-the-badge&logo=github&logoColor=white)](https://github.com/guicarvalho)
 
-## Objetivo geral
-Criar um sistema bancário com as operações: sacar, depositar
-e visualizar extrato.
+## Atualização ⚠️
+!!! Esta nova versão possuí funções para ambos os objetivos abaixo !!!
+
+## Objetivo geral 🎯
+Criar um sistema bancário com funções para as operações: sacar, depositar, 
+visualizar extrato, cadastrar usuário e criar conta.
 
 ## Desafio
 Fomos contratados por um grande banco para desenvolver o
