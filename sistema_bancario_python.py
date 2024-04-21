@@ -139,3 +139,5 @@ while True:
         print('O Banco Brazuca, Agradece sua visita!')
         break
 
+for chave, usuario in enumerate(usuarios):
+    print(usuario)
