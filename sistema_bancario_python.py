@@ -45,18 +45,25 @@ def criar_conta_corrente(usuario):
     }])
     print('----------------Usuário Cadastrado com Sucesso----------------\n')
 
-
+# A função depositar recebe parâmetros de saldo e o valor a ser depositado, em
+# seguida o sistema fornece o extrato mostrando quanto foi depositado na conta.
 def depositar(saldo, valor, extrato, /):
+    # Para atualizar os valores das funções, estou atualizando os dados das variáveis globais, já que funções não irão armazenar os valores no seu final
     global saldo_conta
     saldo += valor
+    # Atualizando o saldo_conta da variável global
     saldo_conta += saldo
     if valor < 0:
+        # Caso o usuário digite números negativos, o programa irá informar a mensagem padrão contida em extrato
         saldo, valor = 0, 0
         return extrato, valor
     elif valor > 0:
         extrato = f'-------------------------\nUltimo depósito: R$ {valor}\nSaldo da conta: R$ {saldo_conta}'
         return extrato
 
+# Sacar recebe argumentos posicionais "saldo_atual" e "valor_saque", argumentos nomeados "extrato" e "numeros_saques"
+# valor_saque irá pegar o valor que o cliente deseja retirar do banco, sendo assim atualizando globalmente a variável saldo_conta
+# de onde será descontado o valor.
 def sacar(saldo_atual, valor_saque, /, *, extrato, numero_saques):
     global LIMITE_SAQUE, saldo_conta, historico, total_saque, usuarios
     
@@ -83,11 +90,13 @@ def sacar(saldo_atual, valor_saque, /, *, extrato, numero_saques):
         return extrato
 
 
+# Histórico irá fornecer os dados de saldo atual da conta
 def visualizar_historico(saldo, comprovante):
     print(comprovante)
     print(f'\nSaldo atual: R${saldo}')
 
 
+# Função mostra o quantitativo de contas criadas por determinado usuário.
 def contas_criadas(dados):
     for chave, dado in enumerate(dados):
         for conta in dado:
@@ -97,17 +106,20 @@ def contas_criadas(dados):
             print(f'Usuário: ', conta['Usuário'])
     
 
+# Enquanto o usuário estiver realizando as operações no sistema, o programa fica em execução
+# até que o cliente deseja encerrar suas consultas.
 while True:
     menu()
     operacao = int(input('Operação: '))
 
     if operacao == 1:
+        # Na operação 1 - Resolvi deixar inicialmente, para evitar que os usuários realizem a tentativa de criar usuários diferentes com o mesmo CPF
         saldo_conta, dados_bancarios = 0, []
 
         nome_usuario = input('Nome completo: ')
         nascimento = input('Data nascimento - (Ex: 15/05/1999): ')
         cpf_usuario = int(input('Cpf: '))
-
+        # Valida se o CPF recebido pelo sistema é único.
         for chave, valor in enumerate(usuarios):
             for itens in valor:
                 if cpf_usuario == itens['Cpf']:
