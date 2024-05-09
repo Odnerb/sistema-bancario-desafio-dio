@@ -1,4 +1,4 @@
-# DESAFIO DIO - CRIAÇÃO DE SISTEMA BANCÁRIO EM PYTHON
+# DESAFIO DIO - CRIAÇÃO DE SISTEMA BANCÁRIO EM PYTHON COM POO
 
 ## Instrutor desafiante
 Guilherme Carvalho
@@ -8,11 +8,12 @@ Guilherme Carvalho
 
 ## Atualização ⚠️
 !!! Esta nova versão possuí funções para ambos os objetivos abaixo !!!
-O que tem de novo: (criação de conta e cadastro de usuário)
+O que tem de novo: (Classes que definem o comportamento de um banco, atributos privados e públicos)
 
 ## Objetivo geral 🎯
-Criar um sistema bancário com funções para as operações: sacar, depositar, 
-visualizar extrato, cadastrar usuário e criar conta.
+Criar um sistema bancário com POO, com objetivo de simular relacionamentos
+entre classes, de acordo com suas características e métodos que irão influenciar
+no comportamento dos objetos e retornar o que o cliente deseja do menu do banco.
 
 ## Desafio
 Fomos contratados por um grande banco para desenvolver o
@@ -30,12 +31,10 @@ devem ser armazenados em uma variável e exibidos na
 operação de extrato.
 
 ## Operação de saque 💸
-O sistema deve permitir realizar 3 saques diários com limite
-máximo de R$ 500,00 por saque. Caso o usuário não tenha
-saldo em conta, o sistema deve exibir uma mensagem
-informando que não será possível sacar o dinheiro por falta de
-saldo. Todos os saques devem ser armazenados em uma
-variável e exibidos na operação de extrato.
+Nessa nova atualização, o usuário ao criar sua conta
+pode informar o quanto pretende sacar e quantas operações
+de saque pode realizar no dia (Ex: limite R$ 600,00 e
+até 5 saques diários).
 
 ## Operação de extrato 🧾
 Essa operação deve listar todos os depósitos e saques
