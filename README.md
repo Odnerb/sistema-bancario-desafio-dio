@@ -7,8 +7,7 @@ Guilherme Carvalho
 [![GitHub](https://img.shields.io/badge/GitHub-100000?style=for-the-badge&logo=github&logoColor=white)](https://github.com/guicarvalho)
 
 ## Atualização ⚠️
-!!! Esta nova versão possuí funções para ambos os objetivos abaixo !!!
-O que tem de novo: (Classes que definem o comportamento de um banco, atributos privados e públicos)
+!!! O que tem de novo: (Classes que definem o comportamento de um banco, atributos privados e públicos) !!!
 
 ## Objetivo geral 🎯
 Criar um sistema bancário com POO, com objetivo de simular relacionamentos
